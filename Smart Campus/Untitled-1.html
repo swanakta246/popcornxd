@@ -1,0 +1,155 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smart campus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #181c18;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.4);
+            font-family: 'Poppins', sans-serif;
+        }
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #e0e0e0;
+            display: block;
+            transition: 0.2s;
+            border-bottom: 1px solid #2a302a;
+        }
+
+        .sidebar a:hover {
+            background-color: #0d8006;
+            color: #ffffff;
+            padding-left: 32px;
+        }
+        .sidebar .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 32px;
+            border: none;
+            background: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .hamburger-btn {
+            font-size: 28px;
+            cursor: pointer;
+            background-color: #f4fbf4;
+            color: #0d8006;
+            border: 2px solid #0d8006;
+            border-radius: 10px;
+            padding: 4px 12px;
+            transition: 0.2s;
+        }
+
+        .hamburger-btn:hover {
+            background-color: #0d8006;
+            color: white;
+        }
+    </style>
+</head>
+<body style="margin: 20px;">
+    <div id="mySidebar" class="sidebar">
+        <button class="close-btn" onclick="closeMenu()">&times;</button>
+        
+        <div style="padding: 0 25px 20px 25px; color: #7dff75; font-weight: bold; font-size: 20px; border-bottom: 2px solid #0d8006;">
+            MENU
+        </div>
+
+        <a href="#">🏠 Dashboard</a>
+        <a href="#">👤 Profile</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">📊 Analytics</a>
+        <a href="#">🚪 Logout</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+        <button class="hamburger-btn" onclick="openMenu()">&#9776;</button>
+        <h1 style="color: rgb(13, 128, 6); font-family: 'Orbitron', sans-serif; margin: 0;">SMART CAMPUS</h1>
+    </div>
+    <div style="
+        width: 430px;
+        height: 110px;
+        background: linear-gradient(135deg, #525252 0%, #8a8a8a 45%, #4a4a4a 100%);
+        border: 2px solid #c5b358;
+        border-radius: 22px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        overflow: hidden;
+    ">
+        <span style="
+            color: #fff8c9;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-weight: 900;
+            font-size: 28px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        ">WELCOME</span>
+
+        <img src="boy.png" alt="Student" style="
+            height: 105px;
+            align-self: flex-end;
+            object-fit: contain;
+        ">
+    </div>
+    <div style="display: grid; grid-template-columns: 200px 200px; row-gap: 20px; column-gap: 30px;">
+        <button style="padding: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 2px solid #0d8006; background-color: #bddc95; cursor: pointer;">
+            <img src="Study.png" alt="Study" style="width: 45px; height: 45px;">
+            <span style="font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: bold;">STUDY</span>
+        </button>
+         <button style="padding: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 2px solid #0d8006; background-color: #bddc95; cursor: pointer;">
+            <img src="calender.png" alt="Calender" style="width: 45px; height: 45px;">
+            <span style="font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: bold;">CALENDAR</span>
+        </button>
+        <button style="padding: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 2px solid #0d8006; background-color: #bddc95; cursor: pointer;">
+            <img src="wattet.png" alt="Finance" style="width: 45px; height: 45px;">
+            <span style="font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: bold;">FINANCE</span>
+        </button>
+        <button style="padding: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 2px solid #0d8006; background-color: #bddc95; cursor: pointer;">
+            <img src="assest.png" alt="Assignment" style="width: 45px; height: 45px;">
+            <span style="font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: bold;">ASSIGNMENT</span>
+        </button>
+    </div>
+
+    <br>
+
+    <div style="display: grid; grid-template-columns: 200px 200px; row-gap: 20px; column-gap: 30px;">
+        <button style="padding: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 2px solid #0d8006; background-color: #bddc95; cursor: pointer;">
+            <img src="dead line.png" alt="Deadline" style="width: 45px; height: 45px;">
+            <span style="font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: bold;">DEADLINE</span>
+        </button>
+        <button style="padding: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 2px solid #0d8006; background-color: #bddc95; cursor: pointer;">
+            <img src="comming.png" alt="Comming Soon" style="width: 45px; height: 45px;">
+            <span style="font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: bold;">COMMING SOON</span>
+        </button>
+    </div>
+    <script>
+        function openMenu() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+        function closeMenu() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
